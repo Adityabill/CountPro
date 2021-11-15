@@ -1,4 +1,8 @@
 import React from 'react';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'react-bootstrap'
+import ResetIcon from './Images/Reset_Icon.png';
+import MainCss from './Css/Main.module.css'
 
 export default class CounterComponents extends React.Component{
     constructor(){
@@ -22,6 +26,10 @@ export default class CounterComponents extends React.Component{
             } 
         }
 
+        resetCount(){  //Function to reset count to 0
+            this.setState({count: 0})
+        }
+
     render(){
         return(
             <div>
@@ -32,14 +40,19 @@ export default class CounterComponents extends React.Component{
                  </div>
 
 
-                 <div>
-                      {this.state.count}
+                 <div className={MainCss.count_div}>
+                     <div className={MainCss.intercount_div}>
+                      <strong>Current Count: {this.state.count}</strong> 
 
                       <div>
-                      <button onClick={()=>{this.incrementCount()}}>+</button> {/* Button to increment */}
+                      <Button variant="danger" onClick={()=>{this.decrementCount()}}> - </Button> {/* Button to decrement */}
 
-                      <button onClick={()=>{this.decrementCount()}}>-</button> {/* Button to decrement */}
+                      <Button variant="primary" onClick={()=>{this.resetCount()}}><img src={ResetIcon} height="10px" width="10px" /></Button> {/* Button to reset count */}
+
+                      <Button variant="success" onClick={()=>{this.incrementCount()}}> + </Button> {/* Button to increment */}
+
                       </div>
+                    </div>
                  </div>
 
 
