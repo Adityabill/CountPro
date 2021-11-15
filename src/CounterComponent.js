@@ -3,6 +3,8 @@ import React from 'react';
 import {Button} from 'react-bootstrap'
 import ResetIcon from './Images/Reset_Icon.png';
 import MainCss from './Css/Main.module.css'
+import GitHubIcon from './Images/GitHub_Icon.png'
+import LinkdinIcon from './Images/Linkdin_Icon.png'
 
 export default class CounterComponents extends React.Component{
     constructor(){
@@ -34,9 +36,11 @@ export default class CounterComponents extends React.Component{
         return(
             <div>
                 <div>
-                 <h1>
+                 <header> {/* Header */}
+                   <h1>
                      Counter Pro
-                 </h1>
+                   </h1>
+                 </header>
                  </div>
 
 
@@ -53,6 +57,16 @@ export default class CounterComponents extends React.Component{
 
                       </div>
                     </div>
+                 </div>
+
+                 <div> {/* Footer */}
+                     <footer>
+                         Developed by: Aditya Bikram Arandhara <br />
+                         Connect me through:
+                         <a href="https://github.com/Adityabill" target="blank"> <img src={GitHubIcon} height="3%" width="3%" /> </a>
+                         <a href="https://www.linkedin.com/in/aditya-bikram-arandhara/" target="blank"> <img src={LinkdinIcon} height="3%" width="3%" /> </a>
+
+                     </footer>
                  </div>
 
 
