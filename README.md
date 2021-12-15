@@ -1,3 +1,5 @@
+![Lines of code](https://img.shields.io/tokei/lines/github.com/Adityabill/CountPro?color=Green&logo=GitHub)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
